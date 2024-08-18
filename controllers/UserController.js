@@ -56,6 +56,9 @@ const userData = asyncHandler( async (req, res) => {
     res.status(200).json({status: true, user:req.user, message:'User Register'});
 });
 
+const userList = asyncHandler( async (req, res) => {
+    const userlist = await userModel.find();
+    res.status(200).json({status: true, userlist:userlist, message:'User Fetch'});
+});
 
-
-module.exports = {userLogin, userRegister, userData};
+module.exports = {userLogin, userRegister, userData, userList};
