@@ -26,7 +26,6 @@ const userLogin = asyncHandler( async(req,res) => {
         res.status(422);
         throw new Error('Login failed');
     }
-    
 });
 
 const userRegister = asyncHandler( async(req,res) => {
